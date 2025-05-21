@@ -4,11 +4,21 @@ import Trainings from "./pages/Trainings";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import App from "./App";
 
 export const router = createBrowserRouter([
-    {path: "/", element: <Home />},
-    {path: "/trainings", element: <Trainings />},
-    {path: "/über-mich", element: <About />},
-    {path: "/kontakt", element: <Contact />},
-    {path: "*", element: <NotFound />},
+
+{
+path: "/",
+element: <App />,
+childrend: [
+        { index: true, element: <Home />},
+        { path: "trainings", element: <Trainings />},
+        { path: "über-mich", element: <About />},
+        { path: "kontakt", element: <Contact />},
+        { path: "*", element: <NotFound />},
+        ],
+    },
 ]);
+
+

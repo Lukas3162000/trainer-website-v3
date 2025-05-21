@@ -1,11 +1,17 @@
-import { useState } from 'react'
+import { useState } from 'react';
+import React from 'react';
+import NavBar from './components/NavBar';
+import { Outlet } from "react-router-dom";
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <p className='text-red-500/75 hover:text-blue-300'>Hallo, ich bin die app.jsx!!!!</p>
+      <NavBar />
+      <main>
+        <Outlet />
+      </main>
     </>
   )
 }
