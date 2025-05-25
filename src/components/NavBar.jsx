@@ -8,7 +8,7 @@ export default function NavBar () {
 
     return(
         <>
-            <nav className='bg-neutral-50 shadow p-4 flex justify-around items-center'>
+            <nav className='bg-neutral-50 shadow-md p-4 flex justify-around items-center sticky top-0'>
                 <div><img src="src\assets\Logos\72x72.svg" alt="Lukas Fitness Logo" /></div>
                 <ul className='flex space-6 gap-4 items-center justify-center font-bold'>
                     <li className='hover:text-sky-700'><NavLink to="/">HOME</NavLink></li>
