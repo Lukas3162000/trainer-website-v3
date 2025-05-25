@@ -1,4 +1,4 @@
-import {createBrowserRouter } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Trainings from "./pages/Trainings";
 import About from "./pages/About";
@@ -6,19 +6,18 @@ import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import App from "./App";
 
-export const router = createBrowserRouter([
-
-{
-path: "/",
-element: <App />,
-children: [
-        { index: true, element: <Home />},
-        { path: "trainings", element: <Trainings />},
-        { path: "über-mich", element: <About />},
-        { path: "kontakt", element: <Contact />},
-        { path: "*", element: <NotFound />},
-        ],
-    },
-]);
-
-
+export default function Router() {
+  return (
+    <HashRouter>
+      <Routes>
+        <Route path="/" element={<App />}>
+          <Route index element={<Home />} />
+          <Route path="trainings" element={<Trainings />} />
+          <Route path="über-mich" element={<About />} />
+          <Route path="kontakt" element={<Contact />} />
+          <Route path="*" element={<NotFound />} />
+        </Route>
+      </Routes>
+    </HashRouter>
+  );
+}
