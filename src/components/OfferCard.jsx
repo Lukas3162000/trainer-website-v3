@@ -7,7 +7,7 @@ export default function OfferCard({ imageSrc, title, description, buttonLabel = 
   return (
 
 
-    <div className="bg-white rounded-2xl shadow-md transition hover:shadow-xl min-w-[250px] max-w-[400px] flex-shrink-0 snap-start flex flex-col h-full">
+    <div className="bg-white rounded-2xl shadow-md transition hover:shadow-xl min-w-[250px] max-w-[400px] flex-shrink-0 snap-start flex flex-col h-full ">
       <img src={imageSrc} alt={title} className={`w-full h-48 object-cover rounded-t-2xl ${imageClassName}`} />
       <div className="p-6 flex flex-col flex-grow ">
         <div className='flex-grow flex flex-col mb-4'>

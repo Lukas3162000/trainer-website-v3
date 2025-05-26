@@ -2,12 +2,14 @@ import { useState } from 'react';
 import React from 'react';
 import MiniCard from '../components/MiniCard';
 import ContactForm from '../components/ContactForm';
+import Footer from '../components/Footer.jsx';
 
 export default function Contact() {
 
   return (
     <>
-    <section className='pt-20 flex flex-col '>
+    <section >
+      <div className='pt-20 flex flex-col' >
         <h1 className="text-3xl md:text-4xl font-bold mb-4 text-center">
           Nimm Kontakt auf – dein individuelles Coaching beginnt hier
         </h1>
@@ -29,6 +31,7 @@ export default function Contact() {
             />
           </div>
         </div>
+       </div>
 
         <ContactForm />
         
@@ -41,6 +44,8 @@ export default function Contact() {
         </p>
 
       </section>
+      <Footer />
+      
 
     </>
   )

@@ -3,6 +3,7 @@ import React from 'react';
 import Hero from '../components/Hero.jsx';
 import AboutSection from '../components/AboutSection.jsx';
 import OfferCard from '../components/OfferCard.jsx';
+import Footer from '../components/Footer.jsx';
 
 export default function Home() {
 
@@ -57,6 +58,7 @@ const offers = [
         ))}
         </div>
       </div>
+      <Footer />
     </>
   )
 }
