@@ -7,7 +7,7 @@ export default function Trainings() {
   return (
     <>
     <section className="px-4 py-8 flex flex-col items-center">
-      <h1 className="text-3xl font-bold mb-4 text-center">Trainingsangebote</h1>
+      <h1 className="text-4xl font-bold mb-4 text-center">Trainingsangebote</h1>
 
       <p className="max-w-3xl text-center text-neutral-700 mb-8">
         Hier findest du mein Trainingsangebot – ganz gleich, ob du gerade erst startest oder schon etwas Erfahrung mitbringst. 

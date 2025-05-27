@@ -5,6 +5,8 @@ import AboutSection from '../components/AboutSection.jsx';
 import OfferCard from '../components/OfferCard.jsx';
 import Footer from '../components/Footer.jsx';
 
+
+
 export default function Home() {
 
 const offers = [
@@ -43,19 +45,25 @@ const offers = [
     <>
       <Hero />
       <AboutSection />
-      <div className='flex justify-center'>
-        <div className='flex justify-start overflow-x-auto gap-6 px-4 snap-x snap-mandatory scroll-smooth scrollbar-hide'>	
-        {offers.map(({ imageSrc, title, description, buttonLabel, buttonLink}, idx)=> (
-          <OfferCard
-          key={idx}
-          imageSrc={imageSrc}
-          title={title}
-          description={description}
-          buttonLabel={buttonLabel}
-          buttonLink={buttonLink}
-          imageClassName={idx === 1 ? "object-[center_-155px]" : idx === 2 ? "object-[center_-5px]" : ""}
-          />
-        ))}
+    	
+      <div className='flex flex-col center'>
+      <h2 className='flex justify-center text-3xl font-bold mb-2 text-center'>Mein Angebot für dich</h2>
+      <p className='flex justify-center text-lg mb-6 text-neutral-700'>Individuell abgestimmt auf dein Ziel und deinen Alltag.</p>
+        <div className='flex justify-center'>
+
+          <div className='flex justify-start overflow-x-auto gap-6 px-4 snap-x snap-mandatory scroll-smooth 2xl:no-scrollbar' >	
+          {offers.map(({ imageSrc, title, description, buttonLabel, buttonLink}, idx)=> (
+            <OfferCard
+            key={idx}
+            imageSrc={imageSrc}
+            title={title}
+            description={description}
+            buttonLabel={buttonLabel}
+            buttonLink={buttonLink}
+            imageClassName={idx === 1 ? "object-[center_-155px]" : idx === 2 ? "object-[center_-5px]" : ""}
+            />
+          ))}
+          </div>
         </div>
       </div>
       <Footer />

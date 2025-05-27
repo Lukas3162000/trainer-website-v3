@@ -25,7 +25,7 @@ export default function Hero() {
           </p>
           <Link
             to="/kontakt"
-            className="inline-block bg-orange-400 text-white px-6 py-3 rounded-full text-lg hover:bg-orange-500 transition font-semibold"
+            className="inline-block bg-orange-400 text-white px-6 py-3 rounded-full text-lg hover:bg-orange-500 transition-transform duration-300 ease-in hover:scale-105 font-semibold"
           >
             Kostenloses Erstgespräch anfragen
           </Link>
