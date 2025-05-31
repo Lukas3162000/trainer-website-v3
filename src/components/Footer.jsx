@@ -7,8 +7,12 @@ export default function Footer() {
       <div className="max-w-5xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
         
         {/* Impressum Link */}
-        <a href="/impressum" className="hover:text-sky-600 font-semibold">
+        <a href="https://lukas3162000.github.io/privacy/impressum.html" className="hover:text-sky-600 font-semibold">
           Impressum
+        </a>
+
+        <a href="https://lukas3162000.github.io/privacy/Datenschutz.html" className="hover:text-sky-600 font-semibold">
+          Datenschutz
         </a>
 
         {/* Social Media Icons */}

@@ -9,6 +9,8 @@ import Footer from '../components/Footer.jsx';
 
 export default function Home() {
 
+const [showDisclaimer, setShowDisclaimer] = useState(true);
+
 const offers = [
   {
     imageSrc: "https://images.unsplash.com/photo-1518617840859-acd542e13a99?q=80&w=1952&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", // Beispielbild Fitness
@@ -43,14 +45,26 @@ const offers = [
 
   return (
     <>
-<div className="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-900 p-6 my-6 rounded shadow">
-  <h2 className="text-lg font-semibold mb-2">Hinweis: Demo-Seite</h2>
-  <p>
-    Diese Website ist ein nicht-kommerzielles Demo-Projekt zu Lern- und Präsentationszwecken.
-    Alle Inhalte, Bilder und Texte sind fiktiv oder exemplarisch und stellen kein echtes Angebot dar.
-    Es erfolgt keine Datenspeicherung über das Kontaktformular.
-  </p>
-</div>
+
+      <div>
+          {showDisclaimer && (
+          <div className="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-900 p-6 my-6 rounded shadow relative mx-4 md:mx-auto">
+            <button
+              onClick={() => setShowDisclaimer(false)}
+              className="absolute top-2 right-3 text-yellow-700 hover:text-yellow-900 text-xl font-bold"
+              aria-label="Hinweis schließen"
+            >
+              ×
+            </button>
+            <h2 className="text-lg font-semibold mb-2">Hinweis: Demo-Seite</h2>
+            <p>
+              Diese Website ist ein nicht-kommerzielles Demo-Projekt zu Lern- und Präsentationszwecken.
+              Alle Inhalte, Bilder und Texte sind fiktiv oder exemplarisch und stellen kein echtes Angebot dar.
+              Es erfolgt keine Datenspeicherung über das Kontaktformular.
+            </p>
+          </div>
+        )}
+    </div>
 
 
       <Hero />
@@ -59,9 +73,9 @@ const offers = [
  
 
       <div className='flex flex-col center'>
-      <h2 className='flex justify-center text-3xl font-bold mb-2 text-center'>Mein Angebot für dich</h2>
-      <p className='flex justify-center text-lg mb-6 text-neutral-700'>Individuell abgestimmt auf dein Ziel und deinen Alltag.</p>
-        <div className='flex justify-center'>
+          <h2 className='flex justify-center text-3xl font-bold mb-2 text-center'>Mein Angebot für dich</h2>
+          <p className='flex justify-center text-lg mb-6 text-neutral-700'>Individuell abgestimmt auf dein Ziel und deinen Alltag.</p>
+      <div className='flex justify-center'>
 
           <div className='flex justify-start overflow-x-auto gap-6 px-4 snap-x snap-mandatory scroll-smooth 2xl:no-scrollbar' >	
           {offers.map(({ imageSrc, title, description, buttonLabel, buttonLink}, idx)=> (
@@ -79,6 +93,7 @@ const offers = [
         </div>
       </div>
       <Footer />
+      
     </>
   )
 }
