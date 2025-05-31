@@ -43,9 +43,21 @@ const offers = [
 
   return (
     <>
+<div className="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-900 p-6 my-6 rounded shadow">
+  <h2 className="text-lg font-semibold mb-2">Hinweis: Demo-Seite</h2>
+  <p>
+    Diese Website ist ein nicht-kommerzielles Demo-Projekt zu Lern- und Präsentationszwecken.
+    Alle Inhalte, Bilder und Texte sind fiktiv oder exemplarisch und stellen kein echtes Angebot dar.
+    Es erfolgt keine Datenspeicherung über das Kontaktformular.
+  </p>
+</div>
+
+
       <Hero />
       <AboutSection />
-    	
+
+ 
+
       <div className='flex flex-col center'>
       <h2 className='flex justify-center text-3xl font-bold mb-2 text-center'>Mein Angebot für dich</h2>
       <p className='flex justify-center text-lg mb-6 text-neutral-700'>Individuell abgestimmt auf dein Ziel und deinen Alltag.</p>
